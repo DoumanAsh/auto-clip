@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "auto-clip",
+    "version": "0.1",
+    "author": "Douman",
+    "homepage_url": "https://github.com/DoumanAsh/auto-clip",
+
+    "icons": {
+        "48": "icons/clipboard-48.png",
+        "96": "icons/clipboard-96.png"
+    },
+
+    "description": "Auto copy selected text to clipboard.",
+
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["auto-clip.js"]
+    }],
+
+    "options_ui": {
+        "page": "options/index.html"
+    },
+
+    "permissions": ["storage"]
+}
