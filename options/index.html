@@ -1,16 +1,60 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+      <meta charset="utf-8">
+
+      <style>
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    box-shadow: 3px 3px 3px 4px rgba(0,0,0,.4);
+    border: 1px solid #96a8b2;
+}
+
+.settings-element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .25em;
+    border-bottom: 2px solid #e5eaec;
+}
+
+.settings-element:nth-child(even) {
+    background: #e5eaec;
+}
+
+.settings-element-sub {
+    font-size: 1.5em;
+}
+
+.header {
+    margin: 0;
+    width: 100%;
+    color: white;
+    background: #444;
+    border-bottom: none;
+}
+      </style>
+
   </head>
 
   <body>
 
-    <form>
-        <label>Clean Selection on Copy<input type="checkbox" id="select_clean"></label>
-    </form>
+      <h1 class="header">Settings</h1>
+      <div class="settings" >
+          <form class="settings-element">
+              <label class="settings-element-sub">Clean Selection on Copy</label>
+              <input class="settings-element-sub " type="checkbox" id="select_clean">
+          </form>
 
-    <script src="index.js"></script>
+          <form class="settings-element">
+              <label class="settings-element-sub">Trim text on Copy</label>
+              <input class="settings-element-sub" type="checkbox" id="select_trim">
+          </form>
+      </div>
+
+      <script src="index.js"></script>
 
   </body>
 
