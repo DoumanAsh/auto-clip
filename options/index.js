@@ -20,6 +20,7 @@ function init() {
     function set(result) {
         document.getElementById("select_clean").checked = result["select_clean"] || false
         document.getElementById("select_trim").checked = result["select_trim"] || false
+        document.getElementById("copy_img_on_click").checked = result["copy_img_on_click"] || false
     }
 
     function on_error(error) {

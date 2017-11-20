@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "auto-clip",
-    "version": "0.2",
+    "version": "0.3",
     "author": "Douman",
     "homepage_url": "https://github.com/DoumanAsh/auto-clip",
 
@@ -22,7 +22,6 @@
     },
 
     "permissions": [
-        "*://*/*",
         "clipboardWrite",
         "storage"
     ]
