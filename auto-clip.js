@@ -1,5 +1,21 @@
 'use strict'
 
+let storage_get;
+if (typeof browser !== 'undefined') {
+    //Firefox
+    storage_get = function(keys, callback, error_cb) {
+        browser.storage.local.get(keys).then(callback, error_cb)
+    }
+} else if (typeof chrome !== 'undefined') {
+    //Chrome
+    var browser = chrome
+    storage_get = function(keys, callback) {
+        chrome.storage.local.get(keys, callback)
+    }
+} else {
+    throw "Unsupported browser type"
+}
+
 function init(settings) {
     //In case of array... cuz firefox
     if (settings.length) settings = settings[0]
@@ -60,4 +76,4 @@ function on_error(error) {
     console.log(`Error: ${error}`)
 }
 
-browser.storage.local.get(null).then(init, on_error)
+storage_get(null, init, on_error)
