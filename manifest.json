@@ -20,7 +20,10 @@
     "options_ui": {
         "page": "options/index.html"
     },
-
+    "browser_action": {
+        "default_title": "Settings",
+        "default_popup": "options/index.html"
+    },
     "permissions": [
         "clipboardWrite",
         "storage"

@@ -4,12 +4,21 @@
       <meta charset="utf-8">
 
       <style>
+.body {
+    padding: 0px;
+    margin: 0px;
+    min-width: 10em;
+    min-height: 5em;
+    display: flex;
+    flex-direction: column;
+}
+
 .settings {
     display: flex;
     flex-direction: column;
     align-content: center;
     box-shadow: 3px 3px 3px 4px rgba(0,0,0,.4);
-    border: 1px solid #96a8b2;
+    border: .1em solid #96a8b2;
 }
 
 .settings-element {
@@ -39,8 +48,7 @@
 
   </head>
 
-  <body>
-
+  <body class="body">
       <h1 class="header">Settings</h1>
       <div class="settings" >
           <form class="settings-element">
@@ -60,7 +68,5 @@
       </div>
 
       <script src="index.js"></script>
-
   </body>
-
 </html>
