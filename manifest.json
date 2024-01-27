@@ -1,7 +1,7 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "auto-clip",
-    "version": "0.5",
+    "version": "0.6",
     "author": "Douman",
     "homepage_url": "https://github.com/DoumanAsh/auto-clip",
 
@@ -20,8 +20,7 @@
     "options_ui": {
         "page": "options/index.html"
     },
-    "browser_action": {
-        "default_title": "Settings",
+    "action": {
         "default_popup": "options/index.html"
     },
     "permissions": [
