@@ -26,5 +26,10 @@
     "permissions": [
         "clipboardWrite",
         "storage"
-    ]
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "auto-clip@roseline.servebeer.com"
+        }
+    }
 }
